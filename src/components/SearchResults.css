@@ -1,0 +1,7 @@
+.SearchResults{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    gap: 3.2rem;
+    margin-top: 40px;
+}

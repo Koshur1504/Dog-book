@@ -1,0 +1,15 @@
+.resultcard {
+    height: 150px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background-size:cover;
+    background-position-x: center;
+    border-radius: 4px;
+    position: relative;
+    & .heart {
+        position: absolute;
+        bottom: 3%;
+        right: 3%;
+        cursor: pointer;
+    }
+}
