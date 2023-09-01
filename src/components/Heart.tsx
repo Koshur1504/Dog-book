@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { icons } from "../assets/icons";
 
 interface Props {
-  icon: string;
+  icon: keyof typeof icons;
   alt: string;
 }
 
@@ -14,7 +14,7 @@ const Heart: FC<Props> = ({ icon, alt }) => {
 const HeartIcon = styled.img({
   width: "17px",
   height: "15px",
-  alignSelf: "center"
+  alignSelf: "center",
 });
 
 export default Heart;
