@@ -20,18 +20,18 @@ export const likeSlice = createSlice({
       }
     },
     like: (state, action) => {
-      let data = JSON.parse(localStorage.getItem("favourite"));
+      let data = JSON.parse(localStorage.getItem("favourite")) || [];
       data?.push(action.payload);
       localStorage.setItem("favourite", JSON.stringify(data));
-      state.favourite = JSON.parse(localStorage.getItem("favourite"));
+      state.favourite = JSON.parse(localStorage.getItem("favourite")) || [];
     },
     dislike: (state, action) => {
-      let data = state.favourite
+      let data = state.favourite;
       data = state.favourite.filter((item) => {
         return item !== action.payload;
       });
       localStorage.setItem("favourite", JSON.stringify(data));
-      state.favourite = JSON.parse(localStorage.getItem("favourite"));
+      state.favourite = JSON.parse(localStorage.getItem("favourite")) || [];
     },
   },
 });

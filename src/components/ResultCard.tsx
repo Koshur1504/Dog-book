@@ -11,7 +11,6 @@ const ResultCard = ({ url }: any) => {
   let data = useSelector((state: any) => state.like.favourite);
   const fetchLike = () => {
     if (data?.includes(url)) {
-      console.log(data);
       setLiked(true);
     } else setLiked(false);
   };
